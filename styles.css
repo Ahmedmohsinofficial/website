@@ -503,11 +503,11 @@ right: calc(100% / 5);
 }
         @media screen and (max-width: 768px) {
             .container-about {
-		flex-basis: 100%;
+
                 flex-flow: wrap;
             }
             .container-s {
-		flex-basis: 100%;
+
                 flex-flow: wrap;
             }
             
