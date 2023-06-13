@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Myriad+Pro+Light&display=swap');
+
+        body {
+            padding: 8%;
+            background-color: black;
+            background-image: url('images/tablet.png');
+            background-position: right bottom;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            color: white;
+            font-family: 'Myriad Pro', Arial, sans-serif;
+        }
+        
+        .container-s {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .text-s {
+            font-size: 16pt;
+            color: white;
+            font-weight: lighter;
+            margin-top: 0px;
+            margin-bottom: 30px;
+        } 
+       
+        .section-s {
+            flex-basis: 30%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .section-2-s {
+            align-items: flex-start;
+            margin-left: 0px;
+        }
+
+        .title-text-s {
+            text-decoration: none;
+            color: white;
+        }
+
+        .title-text-s:hover {
+            color: #F5B9A5;
+        }
+
+        .title-s {
+            font-size: 21pt;
+            color: #F5B9A5;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-weight: lighter;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .title-s img {
+            width: 50px;
+            margin-right: 20px;
+        }
+
+        .title-s .title-text-s {
+            font-size: 16pt;
+            font-weight: lighter;
+            transition: color 0.3s;
+        }
+
+        .title-s:hover .title-text-s {
+            color: #F5B9A5;
+        }
+
+        .title-s:hover .normal-image {
+            display: none;
+        }
+
+        .title-s:hover .hover-image {
+            display: block;
+        }
+
+        .normal-image {
+            display: block;
+        }
+
+        .hover-image {
+            display: none;
+        }
+
+        /* Flexbox styles */
+        .title-s a {
+            display: flex;
+            align-items: center;
+        }
+
+        .title-s a img {
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            /* Mobile-specific styles */
+            .container-s {
+                flex-direction: column;
+                align-items: center;
+                gap: 5%;
+            }
+
+            .section-s {
+                width: 100%;
+            }
+
+            .section-2-s {
+                margin-left: 0;
+            }
+
+            .title-s {
+                font-size: 16pt;
+            }
+
+            .title-s img {
+                width: 30px;
+            }
+
+            .title-s .title-text-s {
+                font-size: 12pt;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-s">
+        <div class="section-s">
+            <h2 class="title-s">My Services</h2>
+            <p class="text-s">They say that price, time, and quality are like the three sides of a triangle. It is often believed that if you have two, you have to compromise on the third. But let me tell you, I love a good challenge, and I believe we can break that stereotype. 
+                <br><br>
+                If you give me a clear brief and specific requirements, we can create a winning formula where we deliver what you need in record time, without compromising on the highest quality, and at a cost that suits your budget.
+                <br><br>
+                Over the past ten years, I have had the opportunity to work on a wide range of advertising projects, and here are some of the kinds:</p>
+        </div>
+    
+        <div class="section-s section-2-s">
+            <div class="title-s">
+                <a href="#key-visual" class="title-text-s">
+                    <img class="normal-image" src="images/kv.svg" alt="Icon">
+                    <img class="hover-image" src="images/kv-hover.svg" alt="Icon">
+                    Key Visual
+                </a>
+            </div>
+            <div class="title-s">
+                <a href="#branding" class="title-text-s">
+                    <img class="normal-image" src="images/br.svg" alt="Icon">
+                    <img class="hover-image" src="images/br-hover.svg" alt="Icon">
+                    Branding
+                </a>
+            </div>
+            <div class="title-s">
+                <a href="#company-profile" class="title-text-s">
+                    <img class="normal-image" src="images/cp.svg" alt="Icon">
+                    <img class="hover-image" src="images/cp-hover.svg" alt="Icon">
+                    Company Profile
+                </a>
+            </div>
+            <div class="title-s">
+                <a href="#medical-designs" class="title-text-s">
+                    <img class="normal-image" src="images/md.svg" alt="Icon">
+                    <img class="hover-image" src="images/md-hover.svg" alt="Icon">
+                    Medical Designs
+                </a>
+            </div>
+            <div class="title-s">
+                <a href="#event-conferences" class="title-text-s">
+                    <img class="normal-image" src="images/ec.svg" alt="Icon">
+                    <img class="hover-image" src="images/ec-hover.svg" alt="Icon">
+                    Event & Conferences
+                </a>
+            </div>
+            <div class="title-s">
+                <a href="#packaging-kits" class="title-text-s">
+                    <img class="normal-image" src="images/pk.svg" alt="Icon">
+                    <img class="hover-image" src="images/pk-hover.svg" alt="Icon">
+                    Packaging & Kits
+                </a>
+            </div>
+            <div class="title-s">
+                <a href="#motion-graphics" class="title-text-s">
+                    <img class="normal-image" src="images/mg.svg" alt="Icon">
+                    <img class="hover-image" src="images/mg-hover.svg" alt="Icon">
+                    Motion Graphics
+                </a>
+            </div>
+            <div class="title-s">
+                <a href="#editorial-designs" class="title-text-s">
+                    <img class="normal-image" src="images/ed.svg" alt="Icon">
+                    <img class="hover-image" src="images/ed-hover.svg" alt="Icon">
+                    Editorial Designs
+                </a>
+            </div>
+            <div class="title-s">
+                <a href="#internal-com" class="title-text-s">
+                    <img class="normal-image" src="images/ic.svg" alt="Icon">
+                    <img class="hover-image" src="images/ic-hover.svg" alt="Icon">
+                    Internal Com.
+                </a>
+            </div>
+            <div class="title-s">
+                <a href="#3d-elements" class="title-text-s">
+                    <img class="normal-image" src="images/3d.svg" alt="Icon">
+                    <img class="hover-image" src="images/3d-hover.svg" alt="Icon">
+                    3D Elements
+                </a>
+            </div>
+        </div>
+    
+        <div class="section-s section-3-s">
+            <p class="text-s">Design is not just about sitting behind a computer screen. It is about stepping into the real world, experiencing the thrill of bringing our designs to life using top-notch materials and ensuring they are practical and achievable.</p>
+        </div>
+    </div>
+</body>
+</html>
