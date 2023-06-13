@@ -94,22 +94,11 @@
             display: none;
         }
 
-        /* Flexbox styles */
-        .title-s a {
-            display: flex;
-            align-items: center;
-        }
-
-        .title-s a img {
-            margin-right: 10px;
-        }
-
+        /* Mobile-specific styles */
         @media (max-width: 768px) {
-            /* Mobile-specific styles */
             .container-s {
                 flex-direction: column;
                 align-items: center;
-                gap: 5%;
             }
 
             .section-s {
@@ -118,6 +107,7 @@
 
             .section-2-s {
                 margin-left: 0;
+                margin-top: 20px; /* Added margin to create space between sections */
             }
 
             .title-s {
