@@ -601,6 +601,12 @@ width: 820px;
     margin-left: 270px;
 
 }
+.section h2 {
+    font-size: 28pt;
+}
+.section p {
+    font-size: 24pt;
+}
 .tablet {
 width: 400px;
 height: 300px;
