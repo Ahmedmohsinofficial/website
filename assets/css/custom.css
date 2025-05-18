@@ -1,0 +1,41 @@
+@media (max-width: 768px) {
+  h1.vlt-large-heading {
+    font-size: 5.2rem;
+    margin-bottom: 0rem;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .vlt-fullpage-slider .vlt-section__content {
+    height: auto;
+    min-height: 100dvh; /* dynamic viewport height */
+    padding-bottom: 2rem;
+  }
+}
+
+.zoom-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.zoom-wrapper img {
+  transition: transform 0.4s ease;
+}
+
+.zoom-wrapper:hover img {
+  transform: scale(1.08);
+}
+
+/* Title hover color */
+.project-card-title {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-weight: bold;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.project-card-title:hover {
+  color: #e63946;
+}
