@@ -3178,6 +3178,6 @@ img.company-logo {
 
 @media only screen and (max-width: 767px) {
   .container {
-    padding-bottom: 2rem !important;
+    padding-bottom: 1rem !important;
   }
 }
