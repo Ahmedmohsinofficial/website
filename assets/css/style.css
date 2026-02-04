@@ -1080,7 +1080,7 @@ margin-bottom:40px;
 	margin-bottom:30px;
 }
 .contact input:focus {
-	border: 1px solid #da0046;
+	border: 0px solid #da0046;
     -webkit-box-shadow: none;
             box-shadow: none;
     outline: 0 none;
@@ -1182,7 +1182,7 @@ padding: 0;
 text-align: center;
 }
 .footer_social_profile ul li{
-border:1px solid #353638;
+border:0px solid #353638;
 display: inline-block;
 }
 @media only screen and (max-width:480px) { 
@@ -1343,4 +1343,78 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 
+.footer_social_profile {
+  margin-bottom: 20px;
+}
 
+
+}
+
+/* الخط الفاصل */
+.social-icons .divider {
+  width: 1px;
+  height: 18px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Footer Social Icons - Override template styles */
+.footer_social_profile .footer-social-icons{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0; /* الفواصل هتعمل المسافة */
+}
+
+.footer_social_profile .footer-social-icons li{
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 22px; /* مسافة حوالين كل أيقونة */
+}
+
+/* الخط الفاصل بين الأيقونات */
+.footer_social_profile .footer-social-icons li:not(:last-child)::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 18px;
+  background: rgba(255,255,255,0.25);
+}
+
+/* شكل اللينك نفسه (مهم لإزالة المربع الأبيض) */
+.footer_social_profile .footer-social-icons li a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* إزالة أي ستايل قديم بيعمل مربع */
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  padding: 0 !important;
+
+  color: #fff;
+  font-size: 26px;   /* كبر الحجم هنا */
+  line-height: 1;
+  text-decoration: none;
+
+  transition: color .25s ease, transform .25s ease;
+}
+
+.footer_social_profile .footer-social-icons li a:hover{
+  color: #da0046;     /* الأحمر بتاعك */
+  transform: translateY(-1px);
+}
+
+/* لو التمبلت عامل hover/after على a بيطلع مربع أبيض */
+.footer_social_profile .footer-social-icons li a::before,
+.footer_social_profile .footer-social-icons li a::after{
+  content: none !important;
+}
