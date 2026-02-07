@@ -1,0 +1,467 @@
+﻿/*
+ * Arabic RTL Styles
+ * IBM Plex Sans Arabic font
+ * Scoped to Arabic page only
+ */
+
+/* Import IBM Plex Sans Arabic from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+
+/* RTL Base Styles */
+html[dir="rtl"] body {
+    font-family: 'IBM Plex Sans Arabic', 'Jost', sans-serif;
+    text-align: right;
+}
+
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6 {
+    font-family: 'IBM Plex Sans Arabic', 'Jost', sans-serif;
+}
+
+html[dir="rtl"] p,
+html[dir="rtl"] a,
+html[dir="rtl"] li {
+    font-family: 'IBM Plex Sans Arabic', 'Jost', sans-serif;
+}
+
+
+
+/* Navbar RTL */
+html[dir="rtl"] .navbar-nav {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+html[dir="rtl"] .navbar-brand {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+html[dir="rtl"] .navbar-collapse {
+    text-align: right;
+}
+
+html[dir="rtl"] .theme-toggle-btn {
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+html[dir="rtl"] .lang-switch-btn {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+/* Hero Section RTL - Block on LEFT edge, text aligned RIGHT */
+html[dir="rtl"] #home .row {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+html[dir="rtl"] #home .col-lg-8 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+html[dir="rtl"] .about_me_content {
+    text-align: right;
+    direction: rtl;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+html[dir="rtl"] .about_me_content span {
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+/* About Section RTL */
+html[dir="rtl"] .about_info,
+html[dir="rtl"] .skills_info {
+    text-align: right;
+}
+
+html[dir="rtl"] .progress-bar-text span {
+    float: left;
+}
+
+html[dir="rtl"] .progress-bar>span {
+    right: 0;
+    left: auto;
+}
+
+/* Services Section RTL - Clean 3x2 grid dividers */
+html[dir="rtl"] .serviceBox {
+    text-align: right;
+}
+
+/* RTL: sbbr - swap border-right to border-left, keep border-bottom */
+html[dir="rtl"] .sbbr {
+    border-right: 0 !important;
+    border-left: 1px solid #353639;
+    border-bottom: 1px solid #353639;
+}
+
+/* RTL: sbbrnone - now removes the LEFT border (was right in LTR) */
+html[dir="rtl"] .sbbr.sbbrnone {
+    border-left: 0;
+    border-bottom: 1px solid #353639;
+}
+
+/* RTL: sblr - keep both side borders for center card in bottom row */
+html[dir="rtl"] .sblr {
+    border-left: 1px solid #353639;
+    border-right: 1px solid #353639;
+}
+
+@media only screen and (max-width:768px) {
+
+    html[dir="rtl"] .sbbr,
+    html[dir="rtl"] .sblr,
+    html[dir="rtl"] .sbbr.sbbrnone {
+        border: 0 !important;
+    }
+}
+
+/* Portfolio Section RTL */
+html[dir="rtl"] .portfolio_filter ul {
+    text-align: right;
+    direction: rtl;
+}
+
+html[dir="rtl"] .portfolio_filter ul li {
+    border-right: 0;
+    border-left: 1px solid #353639;
+}
+
+html[dir="rtl"] .portfolio_filter ul li:last-child {
+    border-left: 0;
+}
+
+html[dir="rtl"] .box-content {
+    text-align: right;
+}
+
+/* Experience/Timeline Section RTL */
+html[dir="rtl"] .timeline-grid {
+    direction: rtl !important;
+}
+
+/* Timeline item: flex row-reverse to put logo on right */
+html[dir="rtl"] .timeline-item {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    text-align: right !important;
+}
+
+/* Logo positioning - on the RIGHT side */
+html[dir="rtl"] .timeline-icon {
+    margin-right: 0 !important;
+    margin-left: 20px !important;
+}
+
+/* Text content on the left of logo */
+html[dir="rtl"] .timeline-content {
+    text-align: right !important;
+}
+
+/* Company name and role container */
+html[dir="rtl"] .active_company {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    direction: rtl !important;
+}
+
+/* Job title comes first */
+html[dir="rtl"] .job-title {
+    order: 1 !important;
+}
+
+/* Date with separator - separator is part of the date span */
+html[dir="rtl"] .job-date {
+    order: 2 !important;
+    direction: ltr !important;
+    unicode-bidi: embed !important;
+}
+
+/* Mobile RTL for Experience */
+@media (max-width: 768px) {
+    html[dir="rtl"] .timeline-item {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+}
+
+/* Contact Section RTL */
+html[dir="rtl"] .contact {
+    text-align: right;
+}
+
+html[dir="rtl"] .form-control {
+    text-align: right;
+}
+
+html[dir="rtl"] .single_address {
+    text-align: right;
+}
+
+html[dir="rtl"] .address_br {
+    float: right;
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* Footer RTL */
+html[dir="rtl"] .footer {
+    text-align: center;
+}
+
+/* Light Theme RTL Adjustments */
+[data-theme="light"] html[dir="rtl"] .sbbr {
+    border-left-color: #ddd;
+}
+
+[data-theme="light"] html[dir="rtl"] .sblr {
+    border-right-color: #ddd;
+}
+
+[data-theme="light"] html[dir="rtl"] .portfolio_filter ul li {
+    border-left-color: #ddd;
+}
+
+/* Stats Section RTL */
+html[dir="rtl"] .sp {
+    text-align: center;
+}
+
+/* Responsive RTL Adjustments */
+@media (max-width: 991px) {
+    html[dir="rtl"] .navbar-nav {
+        text-align: right;
+    }
+
+    html[dir="rtl"] .navbar-collapse {
+        text-align: right;
+    }
+}
+
+@media (max-width: 768px) {
+    html[dir="rtl"] .about_img {
+        margin-bottom: 30px;
+    }
+
+    html[dir="rtl"] .row {
+        flex-direction: column;
+    }
+}
+
+/* Keep English text LTR where needed */
+html[dir="rtl"] .company-name-en,
+html[dir="rtl"] .project-name-en {
+    direction: ltr;
+    display: inline-block;
+}
+
+/* ==========================================================================
+   FINAL LAYOUT FIXES (Migrated from inline styles)
+   ========================================================================== */
+
+/* 1. HERO SECTION: Force text block to Left */
+html[dir="rtl"] #home .row {
+    display: flex !important;
+    direction: ltr !important;
+    /* Forces row direction to LTR (Left -> Right) */
+    justify-content: flex-start !important;
+    /* Forces items to scan from LEFT */
+    text-align: left !important;
+}
+
+html[dir="rtl"] #home .col-lg-8 {
+    flex: 0 0 auto !important;
+    /* prevent grow */
+    width: auto !important;
+    /* shrink to content */
+    max-width: 100% !important;
+    margin-right: auto !important;
+    /* pushes left in LTR context? No, margin-right: auto pushes nothing if left aligned. Margin-left: auto pushes right. */
+    margin-left: 0 !important;
+    text-align: right !important;
+    /* internal text is RTL */
+    direction: rtl !important;
+    padding-left: 15px !important;
+}
+
+/* 2. SERVICES SECTION: Center Align */
+html[dir="rtl"] .serviceBox {
+    text-align: center !important;
+}
+
+html[dir="rtl"] .serviceBox .icon,
+html[dir="rtl"] .serviceBox p,
+html[dir="rtl"] .serviceBox h3 {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+
+/* 3. EXPERIENCE SECTION: Logo Right, Text Left */
+html[dir="rtl"] #experience .row {
+    direction: ltr !important;
+    display: flex !important;
+    flex-direction: row-reverse !important;
+}
+
+html[dir="rtl"] .timeline-content {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+html[dir="rtl"] .timeline-icon {
+    margin-right: 0 !important;
+    margin-left: 20px !important;
+}
+
+html[dir="rtl"] .timeline-item {
+    text-align: right !important;
+}
+
+html[dir="rtl"] .active_company {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+/* 4. FOOTER: Force LTR (Match English Layout) */
+html[dir="rtl"] footer,
+html[dir="rtl"] .footer,
+html[dir="rtl"] .single_footer,
+html[dir="rtl"] .footer-area,
+html[dir="rtl"] .footer_social_profile,
+html[dir="rtl"] .footer-social-icons,
+html[dir="rtl"] .copyright {
+    direction: ltr !important;
+    text-align: center !important;
+    /* English layout is centered */
+    justify-content: center !important;
+}
+
+/* 5. CONTACT: Force LTR structure */
+html[dir="rtl"] #contact {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+html[dir="rtl"] #contact .section-title {
+    text-align: center !important;
+    direction: rtl !important;
+}
+
+/* 6. PORTFOLIO / PROJECTS: MIXED LAYOUT */
+html[dir="rtl"] #portfolio {
+    text-align: center !important;
+}
+
+/* FILTERS: CENTERED (User Request Option A) */
+html[dir="rtl"] .portfolio_filter {
+    text-align: center !important;
+}
+
+html[dir="rtl"] .portfolio_filter ul {
+    display: inline-flex !important;
+    justify-content: center !important;
+    direction: rtl !important;
+    text-align: initial !important;
+    padding: 0 !important;
+    width: auto !important;
+}
+
+html[dir="rtl"] .portfolio_filter li {
+    float: none !important;
+    display: inline-block !important;
+}
+
+/* PROJECT ITEMS: LOCKED TO ENGLISH (LTR) */
+html[dir="rtl"] .portfolio_item {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+html[dir="rtl"] .box {
+    direction: ltr !important;
+    text-align: left !important;
+    font-family: 'Jost', sans-serif !important;
+}
+
+html[dir="rtl"] .box-content {
+    direction: ltr !important;
+    text-align: left !important;
+    top: 30px !important;
+    left: 33px !important;
+    right: auto !important;
+    bottom: auto !important;
+}
+
+html[dir="rtl"] .box h3,
+html[dir="rtl"] .box .title,
+html[dir="rtl"] .box .post,
+html[dir="rtl"] .box span,
+html[dir="rtl"] .box a {
+    text-align: left !important;
+    font-family: 'Jost', sans-serif !important;
+    direction: ltr !important;
+}
+
+html[dir="rtl"] .box .icon {
+    right: 30px !important;
+    left: auto !important;
+    bottom: 33px !important;
+    direction: ltr !important;
+}
+
+/* Restore Arabic Font for Portfolio Section Title */
+html[dir="rtl"] #portfolio .section-title h1,
+html[dir="rtl"] #portfolio .section-title p {
+    font-family: 'IBM Plex Sans Arabic', 'Jost', sans-serif !important;
+}
+
+/* 7. TYPING CURSOR FIX (RTL) */
+html[dir="rtl"] .typewrite>.wrap {
+    border-right: none !important;
+    /* Remove JS-injected static cursor */
+    margin-left: 0 !important;
+    position: relative;
+    padding-left: 0 !important;
+}
+
+html[dir="rtl"] .typewrite>.wrap::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    /* Scales with font size */
+    background-color: #fff;
+    margin-inline-start: 4px;
+    /* Space between text and cursor */
+    vertical-align: bottom;
+    /* Aligns better with baseline */
+    animation: blink-cursor 0.7s step-end infinite;
+}
+
+@keyframes blink-cursor {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
