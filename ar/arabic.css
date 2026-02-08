@@ -26,7 +26,6 @@ html[dir="rtl"] label,
 html[dir="rtl"] .btn,
 html[dir="rtl"] .navbar-nav .nav-link {
     font-family: 'IBM Plex Sans Arabic', 'Jost', sans-serif !important;
-    text-align: right;
 }
 
 html[dir="rtl"] h1,
