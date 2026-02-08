@@ -1,0 +1,563 @@
+﻿/*
+ * Arabic RTL Styles
+ * IBM Plex Sans Arabic font
+ * Scoped to Arabic page only
+ */
+
+/* Font loading moved to HTML <head> for better mobile performance (Step 445) */
+
+/* RTL Base Styles - Nuclear Option: Force Arabic Font on EVERYTHING */
+html[dir="rtl"] body,
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6,
+html[dir="rtl"] p,
+html[dir="rtl"] a,
+html[dir="rtl"] span,
+html[dir="rtl"] div,
+html[dir="rtl"] li,
+html[dir="rtl"] button,
+html[dir="rtl"] input,
+html[dir="rtl"] textarea,
+html[dir="rtl"] label,
+html[dir="rtl"] .btn,
+html[dir="rtl"] .navbar-nav .nav-link {
+    font-family: 'IBM Plex Sans Arabic', 'Jost', sans-serif !important;
+}
+
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6 {
+    font-family: 'IBM Plex Sans Arabic', 'Jost', sans-serif;
+}
+
+html[dir="rtl"] p,
+html[dir="rtl"] a,
+html[dir="rtl"] li {
+    font-family: 'IBM Plex Sans Arabic', 'Jost', sans-serif;
+}
+
+
+
+/* Navbar RTL */
+html[dir="rtl"] .navbar-nav {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+html[dir="rtl"] .navbar-brand {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+html[dir="rtl"] .navbar-collapse {
+    text-align: right;
+}
+
+html[dir="rtl"] .theme-toggle-btn {
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+html[dir="rtl"] .lang-switch-btn {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+/* Fix spacing for the last menu item in RTL (Contact) */
+/* Mirrors the LTR 'last-child' rule: Restore inner spacing, remove outer spacing */
+html[dir="rtl"] .navbar-custom .navbar-nav .nav-item:last-child .nav-link {
+    margin-right: 5px !important;
+    /* Restore gap between Contact and Portfolio */
+    padding-right: 1rem !important;
+    /* Restore standard Bootstrap padding */
+    margin-left: 0 !important;
+    /* Flush with left edge */
+    padding-left: 0 !important;
+    /* Flush with left edge */
+}
+
+/* Hero Section RTL - Block on LEFT edge, text aligned RIGHT */
+html[dir="rtl"] #home .row {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+html[dir="rtl"] #home .col-lg-8 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+html[dir="rtl"] .about_me_content {
+    text-align: right;
+    direction: rtl;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+html[dir="rtl"] .about_me_content span {
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+/* About Section RTL */
+html[dir="rtl"] .about_info,
+html[dir="rtl"] .skills_info {
+    text-align: right;
+}
+
+html[dir="rtl"] .progress-bar-text span {
+    float: left;
+}
+
+html[dir="rtl"] .progress-bar>span {
+    right: 0;
+    left: auto;
+}
+
+/* Services Section RTL - Global Rules (Base for Dark & Light) */
+/* Universal Reset: Kill ALL borders first to prevent double/overlap */
+html[dir="rtl"] .sbbr,
+html[dir="rtl"] .sblr,
+html[dir="rtl"] .sbbr.sbbrnone {
+    border: none !important;
+    border-width: 0 !important;
+}
+
+/* Correct Geometry: Apply ONLY Left Border (Internal Separator) */
+html[dir="rtl"] .sbbr {
+    border-left: 1px solid #353639 !important;
+    border-bottom: 1px solid #353639 !important;
+}
+
+html[dir="rtl"] .sblr {
+    border-left: 1px solid #353639 !important;
+    border-right: 1px solid #353639 !important;
+    border-right: 0 !important;
+    /* Prevent double border with neighbor */
+}
+
+/* Last Column (Leftmost): No Left Border */
+html[dir="rtl"] .sbbr.sbbrnone {
+    border-left: 0 !important;
+    border-bottom: 1px solid #353639 !important;
+}
+
+@media only screen and (max-width:768px) {
+
+    html[dir="rtl"] .sbbr,
+    html[dir="rtl"] .sblr,
+    html[dir="rtl"] .sbbr.sbbrnone {
+        border: 0 !important;
+    }
+}
+
+/* Light Theme RTL Adjustments */
+/* Light Theme RTL Adjustments */
+/* Explicitly define border width/style/color to match English visual weight exactly */
+[data-theme="light"] html[dir="rtl"] .sbbr {
+    border-left: 1px solid #ddd !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid #ddd !important;
+    border-color: #ddd !important;
+    /* Catch-all for safety */
+}
+
+[data-theme="light"] html[dir="rtl"] .sblr {
+    border-left: 1px solid #ddd !important;
+    border-right: 1px solid #ddd !important;
+    border-bottom: 0 !important;
+    border-top: 0 !important;
+}
+
+[data-theme="light"] html[dir="rtl"] .sbbr.sbbrnone {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid #ddd !important;
+}
+
+[data-theme="light"] html[dir="rtl"] .portfolio_filter ul li {
+    border-left: 2px solid #ddd !important;
+    border-right: 0 !important;
+}
+
+/* Fix Portfolio Filter Borders in RTL (Dark Mode Base) */
+html[dir="rtl"] .portfolio_filter ul li {
+    border-right: 0;
+    border-left: 2px solid #2d2e32;
+}
+
+/* Last Item in Filter */
+html[dir="rtl"] .portfolio_filter ul li:last-child {
+    border-left: 0;
+}
+
+/* Portfolio Section RTL */
+html[dir="rtl"] .portfolio_filter ul {
+    text-align: right;
+    direction: rtl;
+}
+
+html[dir="rtl"] .portfolio_filter ul li {
+    border-right: 0;
+    border-left: 1px solid #353639;
+}
+
+html[dir="rtl"] .portfolio_filter ul li:last-child {
+    border-left: 0;
+}
+
+html[dir="rtl"] .box-content {
+    text-align: right;
+}
+
+/* Experience/Timeline Section RTL */
+html[dir="rtl"] .timeline-grid {
+    direction: rtl !important;
+}
+
+/* Timeline item: flex row to keep Logo (Right) and Content (Left) in RTL */
+html[dir="rtl"] .timeline-item {
+    display: flex !important;
+    flex-direction: row !important;
+    /* Natural RTL: Start (Right) -> End (Left) */
+    text-align: right !important;
+}
+
+/* Logo positioning - on the RIGHT side */
+html[dir="rtl"] .timeline-icon {
+    margin-right: 0 !important;
+    margin-left: 20px !important;
+}
+
+/* Text content on the left of logo */
+html[dir="rtl"] .timeline-content {
+    text-align: right !important;
+}
+
+/* Company name and role container */
+html[dir="rtl"] .active_company {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    direction: rtl !important;
+}
+
+/* Job title comes first */
+html[dir="rtl"] .job-title {
+    order: 1 !important;
+}
+
+/* Date with separator - separator is part of the date span */
+html[dir="rtl"] .job-date {
+    order: 2 !important;
+    direction: ltr !important;
+    unicode-bidi: embed !important;
+}
+
+/* Mobile RTL for Experience */
+@media (max-width: 768px) {
+    html[dir="rtl"] .timeline-item {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* Center the Company/Date row and reduce font to fit one line */
+    html[dir="rtl"] .active_company {
+        justify-content: center !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    html[dir="rtl"] .job-title,
+    html[dir="rtl"] .job-date,
+    html[dir="rtl"] .meta-sep {
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Ensure content is centered and remove inherited margins */
+    html[dir="rtl"] .timeline-content {
+        text-align: center !important;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Reset Icon margins for perfect stacking */
+    html[dir="rtl"] .timeline-icon {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 15px !important;
+    }
+}
+
+/* Contact Section RTL */
+html[dir="rtl"] .contact {
+    text-align: right;
+}
+
+html[dir="rtl"] .form-control {
+    text-align: right;
+}
+
+html[dir="rtl"] .single_address {
+    text-align: right;
+}
+
+html[dir="rtl"] .address_br {
+    float: right;
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* Footer RTL */
+html[dir="rtl"] .footer {
+    text-align: center;
+}
+
+/* Stats Section RTL */
+html[dir="rtl"] .sp {
+    text-align: center;
+}
+
+/* Responsive RTL Adjustments */
+@media (max-width: 991px) {
+    html[dir="rtl"] .navbar-nav {
+        text-align: right;
+    }
+
+    html[dir="rtl"] .navbar-collapse {
+        text-align: right;
+    }
+}
+
+@media (max-width: 768px) {
+    html[dir="rtl"] .about_img {
+        margin-bottom: 30px;
+    }
+
+    html[dir="rtl"] .row {
+        flex-direction: column;
+    }
+}
+
+/* Keep English text LTR where needed */
+html[dir="rtl"] .company-name-en,
+html[dir="rtl"] .project-name-en {
+    direction: ltr;
+    display: inline-block;
+}
+
+/* ==========================================================================
+   FINAL LAYOUT FIXES (Migrated from inline styles)
+   ========================================================================== */
+
+/* 1. HERO SECTION: Force text block to Left */
+html[dir="rtl"] #home .row {
+    display: flex !important;
+    direction: ltr !important;
+    /* Forces row direction to LTR (Left -> Right) */
+    justify-content: flex-start !important;
+    /* Forces items to scan from LEFT */
+    text-align: left !important;
+}
+
+html[dir="rtl"] #home .col-lg-8 {
+    flex: 0 0 auto !important;
+    /* prevent grow */
+    width: auto !important;
+    /* shrink to content */
+    max-width: 100% !important;
+    margin-right: auto !important;
+    /* pushes left in LTR context? No, margin-right: auto pushes nothing if left aligned. Margin-left: auto pushes right. */
+    margin-left: 0 !important;
+    text-align: right !important;
+    /* internal text is RTL */
+    direction: rtl !important;
+    padding-left: 15px !important;
+}
+
+/* 2. SERVICES SECTION: Center Align */
+html[dir="rtl"] .serviceBox {
+    text-align: center !important;
+}
+
+html[dir="rtl"] .serviceBox .icon,
+html[dir="rtl"] .serviceBox p,
+html[dir="rtl"] .serviceBox h3 {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+
+/* 3. EXPERIENCE SECTION: Logo Right, Text Left */
+html[dir="rtl"] #experience .row {
+    direction: ltr !important;
+    display: flex !important;
+    flex-direction: row-reverse !important;
+}
+
+html[dir="rtl"] .timeline-content {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+html[dir="rtl"] .timeline-icon {
+    margin-right: 0 !important;
+    margin-left: 20px !important;
+}
+
+html[dir="rtl"] .timeline-item {
+    text-align: right !important;
+}
+
+html[dir="rtl"] .active_company {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+/* 4. FOOTER: Force LTR (Match English Layout) */
+html[dir="rtl"] footer,
+html[dir="rtl"] .footer,
+html[dir="rtl"] .single_footer,
+html[dir="rtl"] .footer-area,
+html[dir="rtl"] .footer_social_profile,
+html[dir="rtl"] .footer-social-icons,
+html[dir="rtl"] .copyright {
+    direction: ltr !important;
+    text-align: center !important;
+    /* English layout is centered */
+    justify-content: center !important;
+}
+
+/* 5. CONTACT: Force LTR structure */
+html[dir="rtl"] #contact {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+html[dir="rtl"] #contact .section-title {
+    text-align: center !important;
+    direction: rtl !important;
+}
+
+/* 6. PORTFOLIO / PROJECTS: MIXED LAYOUT */
+html[dir="rtl"] #portfolio {
+    text-align: center !important;
+}
+
+/* FILTERS: CENTERED (Match English Layout) */
+html[dir="rtl"] .portfolio_filter {
+    text-align: center !important;
+}
+
+/* MATCH ENGLISH BEHAVIOR: Use standard stacking (No inline-flex) */
+html[dir="rtl"] .portfolio_filter ul {
+    display: block !important;
+    /* Allow natural wrapping like English */
+    text-align: center !important;
+    direction: rtl !important;
+    padding: 0 !important;
+    width: 100% !important;
+    /* Full width to allow centering */
+    margin-bottom: 30px !important;
+}
+
+html[dir="rtl"] .portfolio_filter li {
+    display: inline-block !important;
+    /* Items sit side-by-side but wrap */
+    float: none !important;
+    margin: 0 3px !important;
+    /* Space between items */
+}
+
+/* PROJECT ITEMS: LOCKED TO ENGLISH (LTR) */
+html[dir="rtl"] .portfolio_item {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+html[dir="rtl"] .box {
+    direction: ltr !important;
+    text-align: left !important;
+    font-family: 'Jost', sans-serif !important;
+}
+
+html[dir="rtl"] .box-content {
+    direction: ltr !important;
+    text-align: left !important;
+    top: 30px !important;
+    left: 33px !important;
+    right: auto !important;
+    bottom: auto !important;
+}
+
+html[dir="rtl"] .box h3,
+html[dir="rtl"] .box .title,
+html[dir="rtl"] .box .post,
+html[dir="rtl"] .box span,
+html[dir="rtl"] .box a {
+    text-align: left !important;
+    font-family: 'Jost', sans-serif !important;
+    direction: ltr !important;
+}
+
+html[dir="rtl"] .box .icon {
+    right: 30px !important;
+    left: auto !important;
+    bottom: 33px !important;
+    direction: ltr !important;
+}
+
+/* Restore Arabic Font for Portfolio Section Title */
+html[dir="rtl"] #portfolio .section-title h1,
+html[dir="rtl"] #portfolio .section-title p {
+    font-family: 'IBM Plex Sans Arabic', 'Jost', sans-serif !important;
+}
+
+/* 7. TYPING CURSOR FIX (RTL) */
+html[dir="rtl"] .typewrite>.wrap {
+    border-right: none !important;
+    /* Remove JS-injected static cursor */
+    margin-left: 0 !important;
+    position: relative;
+    padding-left: 0 !important;
+}
+
+html[dir="rtl"] .typewrite>.wrap::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    /* Scales with font size */
+    background-color: #fff;
+    margin-inline-start: 4px;
+    /* Space between text and cursor */
+    vertical-align: bottom;
+    /* Aligns better with baseline */
+    animation: blink-cursor 0.7s step-end infinite;
+}
+
+@keyframes blink-cursor {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
